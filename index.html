@@ -32,9 +32,17 @@
 				</div>
 				<div class="search_container">
 					<div class="input_container">
-						<img class="input_icon" src="src/image/search.png"/>
+						<!--<img class="input_icon" src="src/image/search.png"/>-->
 
-
+						<div class="input_icon">
+							<div id="search_tab" class="input_content center">产品</div>
+							<ul id="search_list" class="input_list">
+								<li class="input_list_item center">产品</li>
+								<li class="input_list_item center">服务</li>
+								<li class="input_list_item center">公司</li>
+								<li class="input_list_item center">求购</li>
+							</ul>
+						</div>
 						<input type="text" placeholder="请输入您要查询的内容" name="" id="" value="" />
 					</div>
 					<div class="button center">
@@ -43,37 +51,143 @@
 				</div>
 			</div>
 			<div class="nav">
-				<div class="nav_left">
-					<div class="nav_serviceTitle ali_center">
-						快捷服务
-					</div>
-					<ul class="nav_service">
-						<li class="nav_service_item">公共服务类</li>
-						<li class="nav_service_item">行业综合查询类</li>
-						<li class="nav_service_item">行业监管类</li>
-						<li class="nav_service_item">从业人员服务类</li>
-						<li class="nav_service_item">第三方共享服务类</li>
-					</ul>
-				</div>
+				<!--<div class="nav_left">-->
+					<!--<div class="nav_serviceTitle ali_center">-->
+						<!--快捷服务-->
+					<!--</div>-->
+					<!--<ul class="nav_service">-->
+						<!--<li class="nav_service_item">公共服务类</li>-->
+						<!--<li class="nav_service_item">行业综合查询类</li>-->
+						<!--<li class="nav_service_item">行业监管类</li>-->
+						<!--<li class="nav_service_item">从业人员服务类</li>-->
+						<!--<li class="nav_service_item">第三方共享服务类</li>-->
+					<!--</ul>-->
+				<!--</div>-->
 				<div class="nav_right">
 					<div class="nav_nav">
 						<ul class="nav_ul flex_box">
-							<li class="flex_item3 center">道路运输</li>
-							<li class="flex_item3 center">运政业务</li>
-							<li class="flex_item3 center">联网联控</li>
-							<li class="flex_item3 center">驾驶培训</li>
-							<li class="flex_item3 center">联网售票</li>
-							<li class="flex_item4 center">运输服务监督</li>
-							<li class="flex_item3 center">网约车监管</li>
+							<li class="flex_item3 center" id="home">首页
+								<div class="item_box" id="second-home">
+									<a href="javascript:;">共享目录</a>
+									<a href="javascript:;">地面资料</a>
+									<a href="javascript:;">高空资料</a>
+									<a href="javascript:;">海洋资料</a>
+									<a href="javascript:;">辐射资料</a>
+									<a href="javascript:;">农气资料</a>
+									<a href="javascript:;">数值预报</a>
+									<a href="javascript:;">历史气候</a>
+									<a href="javascript:;">雷达资料</a>
+									<a href="javascript:;">卫星资料</a>
+									<a href="javascript:;">服务产品</a>
+								</div>
+							</li>
+							<li class="flex_item3 center" id="business">运政业务
+								<div class="item_box" id="second-business">
+									<a href="javascript:;">地面观测</a>
+									<a href="javascript:;">高空观测</a>
+									<a href="javascript:;">卫星云图</a>
+									<a href="javascript:;">雷达产品</a>
+									<a href="javascript:;">模式产品</a>
+									<a href="javascript:;">降水融合</a>
+									<a href="javascript:;">路面同化</a>
+								</div>
+							</li>
+							<li class="flex_item3 center" id="connect">联网联控
+								<div class="item_box" id="second-connect">
+									<a href="javascript:;">共享目录</a>
+									<a href="javascript:;">地面资料</a>
+									<a href="javascript:;">高空资料</a>
+									<a href="javascript:;">海洋资料</a>
+									<a href="javascript:;">辐射资料</a>
+									<a href="javascript:;">农气资料</a>
+									<a href="javascript:;">数值预报</a>
+									<a href="javascript:;">历史气候</a>
+								</div>
+							</li>
+							<li class="flex_item3 center" id="driveEducation">驾驶培训
+								<div class="item_box" id="second-driveEducation">
+									<a href="javascript:;">共享目录</a>
+									<a href="javascript:;">地面资料</a>
+									<a href="javascript:;">高空资料</a>
+									<a href="javascript:;">海洋资料</a>
+									<a href="javascript:;">辐射资料</a>
+									<a href="javascript:;">农气资料</a>
+									<a href="javascript:;">数值预报</a>
+									<a href="javascript:;">历史气候</a>
+								</div>
+							</li>
+							<li class="flex_item3 center" id="sell">联网售票
+								<div class="item_box" id="second-sell">
+									<a href="javascript:;">共享目录</a>
+									<a href="javascript:;">地面资料</a>
+									<a href="javascript:;">高空资料</a>
+									<a href="javascript:;">海洋资料</a>
+									<a href="javascript:;">辐射资料</a>
+									<a href="javascript:;">农气资料</a>
+									<a href="javascript:;">数值预报</a>
+									<a href="javascript:;">历史气候</a>
+								</div>
+							</li>
+							<li class="flex_item4 center" id="transfrom">运输服务监督
+								<div class="item_box" id="second-transfrom">
+									<a href="javascript:;">共享目录</a>
+									<a href="javascript:;">地面资料</a>
+									<a href="javascript:;">高空资料</a>
+									<a href="javascript:;">海洋资料</a>
+									<a href="javascript:;">辐射资料</a>
+									<a href="javascript:;">农气资料</a>
+									<a href="javascript:;">数值预报</a>
+									<a href="javascript:;">历史气候</a>
+								</div>
+							</li>
+							<li class="flex_item3 center" id="carContrl">网约车监管
+								<div class="item_box" id="second-carContrl">
+									<a href="javascript:;">共享目录</a>
+									<a href="javascript:;">地面资料</a>
+									<a href="javascript:;">高空资料</a>
+									<a href="javascript:;">海洋资料</a>
+									<a href="javascript:;">辐射资料</a>
+									<a href="javascript:;">农气资料</a>
+									<a href="javascript:;">数值预报</a>
+									<a href="javascript:;">历史气候</a>
+								</div>
+							</li>
 						</ul>
 					</div>
 					<div class="nav_rightBottom">
-						<div class="nav_banner flex_item2">
+						<div class="home-page flex_item1">
+							<ul class="home-page-box">
+								<li class="home-page-item"><a href="javascript:;" class="center">共享目录</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
+								<ul class="home-page-position">
+									<li class="center home-page-position-item">目录一</li>
+									<li class="center home-page-position-item">目录二</li>
+									<li class="center home-page-position-item">目录三</li>
+								</ul>
+								<li class="home-page-item"><a href="javascript:;" class="center">地面资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
+								<li class="home-page-item"><a href="javascript:;" class="center">高空资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
+								<li class="home-page-item"><a href="javascript:;" class="center">海洋资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
+								<li class="home-page-item"><a href="javascript:;" class="center">辐射资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
+								<li class="home-page-item"><a href="javascript:;" class="center">农气资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
+								<li class="home-page-item"><a href="javascript:;" class="center">数值预报</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
+								<li class="home-page-item"><a href="javascript:;" class="center">历史气候</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
+								<li class="home-page-item"><a href="javascript:;" class="center">雷达资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
+								<li class="home-page-item"><a href="javascript:;" class="center">卫星资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
+								<li class="home-page-item"><a href="javascript:;" class="center">服务产品</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
+
+							</ul>
+						</div>
+						<div class="nav_banner flex_item3">
 							<div class="banner">
 								<img class="img" src="./src/image/banner0.jpg"/>
 								<div class="left center"><</div>
 								<div class="right center">></div>
-
+								<div class="banner_point">
+									<div class="banner_point_item"></div>
+									<div class="banner_point_item"></div>
+									<div class="banner_point_item"></div>
+									<div class="banner_point_item"></div>
+									<div class="banner_point_item"></div>
+								</div>
 								<div class="baner_name">
 									<div class="name_item center">banner0</div>
 									<div class="name_item center">banner1</div>
@@ -84,7 +198,7 @@
 							</div>
 
 						</div>
-						<div class="nav_factors flex_item1">
+						<div class="nav_factors flex_item2">
 							<!--七大要素-->
 							<div class="factors_item">
 								<div class="factors_item_icon">
@@ -194,17 +308,14 @@
 							<p id="getCity" class="center font_size_20">当前定位城市：北京</p>
 
 						</div>
-						<div class="form_info" id="form_cart">
-							<div class="form_info_item form_info_title">
-								<span class="flex_item3">企业名称</span>
-								<span class="flex_item2">驾驶员数量</span>
-								<span class="flex_item2">营运车辆数据</span>
+						<div class="form_info form_tab" id="form_cart">
+							<div class="location_tab">
+								<div class="flex_item1 center activeClass tab_item">产品</div>
+								<div class="flex_item1 center tab_item">团队</div>
+								<div class="flex_item1 center tab_item">思维</div>
+
 							</div>
-							<div class="form_info_item">
-								<span class="flex_item3">北京图为先科技有限公司</span>
-								<span class="flex_item2">200</span>
-								<span class="flex_item2">220</span>
-							</div>
+							<div class="location_content center">产品界面</div>
 						</div>
 					</div>
 				</div>
@@ -325,6 +436,6 @@
 			</div>
 		</div>
 		<script src="./build/bundle.js"></script>
-		
+		<!--<script src="http://localhost:8080/bundle.js"></script>-->
 	</body>
 </html>

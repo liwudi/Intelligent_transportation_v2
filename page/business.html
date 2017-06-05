@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>智能交通服务平台</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <ul class="header_ul">
+            <li class="header_li3 center"><a class="header_link" href="javascript:;">全国重点营运车辆联网恋空</a></li>
+            <li class="header_li3 center"><a class="header_link" href="javascript:;">道路运政管理信息服务系统</a></li>
+            <li class="header_li2 center"><a class="header_link" href="javascript:;">货运车辆系统</a></li>
+            <li class="header_li2 center"><a class="header_link" href="javascript:;">客运联网系统</a></li>
+            <li class="header_li2 center"><a class="header_link" href="javascript:;">驾驶培训系统</a></li>
+            <li class="header_li2 center"><a class="header_link" href="javascript:;">网络约车系统</a></li>
+            <li class="header_li2 center"><a class="header_link" href="javascript:;">监督电话系统</a></li>
+            <li class="header_li3 center"><a class="header_link" href="javascript:;">汽车维修配件追溯系统</a></li>
+            <li class="header_li4 center"><a class="header_link" href="javascript:;">客运接驳运输车辆动态监控平台</a></li>
+        </ul>
+    </div>
+    <div class="logo">
+        <div class="logo_container">
+            <div class="logo_box">
+                <img class="logo_image" src="src/image/logo.png"/>
+            </div>
+            <div class="title_box">
+                <span class="logo_title">智能交通服务平台</span>
+            </div>
+        </div>
+        <div class="search_container">
+            <div class="input_container">
+                <!--<img class="input_icon" src="src/image/search.png"/>-->
+
+                <div class="input_icon">
+                    <div id="search_tab" class="input_content center">产品</div>
+                    <ul id="search_list" class="input_list">
+                        <li class="input_list_item center">产品</li>
+                        <li class="input_list_item center">服务</li>
+                        <li class="input_list_item center">公司</li>
+                        <li class="input_list_item center">求购</li>
+                    </ul>
+                </div>
+                <input type="text" placeholder="请输入您要查询的内容" name="" id="" value="" />
+            </div>
+            <div class="button center">
+                搜索
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <!--<div class="nav_left">-->
+        <!--<div class="nav_serviceTitle ali_center">-->
+        <!--快捷服务-->
+        <!--</div>-->
+        <!--<ul class="nav_service">-->
+        <!--<li class="nav_service_item">公共服务类</li>-->
+        <!--<li class="nav_service_item">行业综合查询类</li>-->
+        <!--<li class="nav_service_item">行业监管类</li>-->
+        <!--<li class="nav_service_item">从业人员服务类</li>-->
+        <!--<li class="nav_service_item">第三方共享服务类</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <div class="nav_right">
+            <div class="nav_nav">
+                <ul class="nav_ul flex_box">
+                    <li class="flex_item3 center" id="home">首页
+                        <div class="item_box" id="second-home">
+                            <a href="javascript:;">共享目录</a>
+                            <a href="javascript:;">地面资料</a>
+                            <a href="javascript:;">高空资料</a>
+                            <a href="javascript:;">海洋资料</a>
+                            <a href="javascript:;">辐射资料</a>
+                            <a href="javascript:;">农气资料</a>
+                            <a href="javascript:;">数值预报</a>
+                            <a href="javascript:;">历史气候</a>
+                            <a href="javascript:;">雷达资料</a>
+                            <a href="javascript:;">卫星资料</a>
+                            <a href="javascript:;">服务产品</a>
+                        </div>
+                    </li>
+                    <li class="flex_item3 center" id="business">运政业务
+                        <div class="item_box" id="second-business">
+                            <a href="javascript:;">地面观测</a>
+                            <a href="javascript:;">高空观测</a>
+                            <a href="javascript:;">卫星云图</a>
+                            <a href="javascript:;">雷达产品</a>
+                            <a href="javascript:;">模式产品</a>
+                            <a href="javascript:;">降水融合</a>
+                            <a href="javascript:;">路面同化</a>
+                        </div>
+                    </li>
+                    <li class="flex_item3 center" id="connect">联网联控
+                        <div class="item_box" id="second-connect">
+                            <a href="javascript:;">共享目录</a>
+                            <a href="javascript:;">地面资料</a>
+                            <a href="javascript:;">高空资料</a>
+                            <a href="javascript:;">海洋资料</a>
+                            <a href="javascript:;">辐射资料</a>
+                            <a href="javascript:;">农气资料</a>
+                            <a href="javascript:;">数值预报</a>
+                            <a href="javascript:;">历史气候</a>
+                        </div>
+                    </li>
+                    <li class="flex_item3 center" id="driveEducation">驾驶培训
+                        <div class="item_box" id="second-driveEducation">
+                            <a href="javascript:;">共享目录</a>
+                            <a href="javascript:;">地面资料</a>
+                            <a href="javascript:;">高空资料</a>
+                            <a href="javascript:;">海洋资料</a>
+                            <a href="javascript:;">辐射资料</a>
+                            <a href="javascript:;">农气资料</a>
+                            <a href="javascript:;">数值预报</a>
+                            <a href="javascript:;">历史气候</a>
+                        </div>
+                    </li>
+                    <li class="flex_item3 center" id="sell">联网售票
+                        <div class="item_box" id="second-sell">
+                            <a href="javascript:;">共享目录</a>
+                            <a href="javascript:;">地面资料</a>
+                            <a href="javascript:;">高空资料</a>
+                            <a href="javascript:;">海洋资料</a>
+                            <a href="javascript:;">辐射资料</a>
+                            <a href="javascript:;">农气资料</a>
+                            <a href="javascript:;">数值预报</a>
+                            <a href="javascript:;">历史气候</a>
+                        </div>
+                    </li>
+                    <li class="flex_item4 center" id="transfrom">运输服务监督
+                        <div class="item_box" id="second-transfrom">
+                            <a href="javascript:;">共享目录</a>
+                            <a href="javascript:;">地面资料</a>
+                            <a href="javascript:;">高空资料</a>
+                            <a href="javascript:;">海洋资料</a>
+                            <a href="javascript:;">辐射资料</a>
+                            <a href="javascript:;">农气资料</a>
+                            <a href="javascript:;">数值预报</a>
+                            <a href="javascript:;">历史气候</a>
+                        </div>
+                    </li>
+                    <li class="flex_item3 center" id="carContrl">网约车监管
+                        <div class="item_box" id="second-carContrl">
+                            <a href="javascript:;">共享目录</a>
+                            <a href="javascript:;">地面资料</a>
+                            <a href="javascript:;">高空资料</a>
+                            <a href="javascript:;">海洋资料</a>
+                            <a href="javascript:;">辐射资料</a>
+                            <a href="javascript:;">农气资料</a>
+                            <a href="javascript:;">数值预报</a>
+                            <a href="javascript:;">历史气候</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav_rightBottom">
+                <div class="home-page flex_item1">
+                    <ul class="home-page-box">
+                        <li class="home-page-item"><a href="javascript:;" class="center">共享目录</a><div class="icon-item center"><span class="center">+</span></div></li>
+                        <li class="home-page-item"><a href="javascript:;" class="center">地面资料</a><div class="icon-item center"><span class="center">+</span></div></li>
+                        <li class="home-page-item"><a href="javascript:;" class="center">高空资料</a><div class="icon-item center"><span class="center">+</span></div></li>
+                        <li class="home-page-item"><a href="javascript:;" class="center">海洋资料</a><div class="icon-item center"><span class="center">+</span></div></li>
+                        <li class="home-page-item"><a href="javascript:;" class="center">辐射资料</a><div class="icon-item center"><span class="center">+</span></div></li>
+                        <li class="home-page-item"><a href="javascript:;" class="center">农气资料</a><div class="icon-item center"><span class="center">+</span></div></li>
+                        <li class="home-page-item"><a href="javascript:;" class="center">数值预报</a><div class="icon-item center"><span class="center">+</span></div></li>
+                        <li class="home-page-item"><a href="javascript:;" class="center">历史气候</a><div class="icon-item center"><span class="center">+</span></div></li>
+                        <li class="home-page-item"><a href="javascript:;" class="center">雷达资料</a><div class="icon-item center"><span class="center">+</span></div></li>
+                        <li class="home-page-item"><a href="javascript:;" class="center">卫星资料</a><div class="icon-item center"><span class="center">+</span></div></li>
+                        <li class="home-page-item"><a href="javascript:;" class="center">服务产品</a><div class="icon-item center"><span class="center">+</span></div></li>
+
+                    </ul>
+                </div>
+                <div class="nav_banner flex_item3">
+                    <div class="banner">
+                        <img class="img" src="./src/image/banner0.jpg"/>
+                        <div class="left center"><</div>
+                        <div class="right center">></div>
+                        <div class="banner_point">
+                            <div class="banner_point_item"></div>
+                            <div class="banner_point_item"></div>
+                            <div class="banner_point_item"></div>
+                            <div class="banner_point_item"></div>
+                            <div class="banner_point_item"></div>
+                        </div>
+                        <div class="baner_name">
+                            <div class="name_item center">banner0</div>
+                            <div class="name_item center">banner1</div>
+                            <div class="name_item center">banner2</div>
+                            <div class="name_item center">banner3</div>
+                            <div class="name_item center">banner4</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="nav_factors flex_item2">
+                    <!--七大要素-->
+                    <div class="factors_item">
+                        <div class="factors_item_icon">
+                            <img class="img" src="./src/image/icon0.jpg" />
+                        </div>
+                        <p class="factors_item_title center">团队</p>
+                    </div>
+                    <div class="factors_item">
+                        <div class="factors_item_icon">
+                            <img class="img" src="./src/image/icon1.jpg" />
+                        </div>
+                        <p class="factors_item_title center">技术</p>
+                    </div>
+                    <div class="factors_item">
+                        <div class="factors_item_icon">
+                            <img class="img" src="./src/image/icon2.jpg" />
+                        </div>
+                        <p class="factors_item_title center">管理</p>
+                    </div>
+                    <div class="factors_item">
+                        <div class="factors_item_icon">
+                            <img class="img" src="./src/image/icon3.jpg" />
+                        </div>
+                        <p class="factors_item_title center">运营</p>
+                    </div>
+                    <div class="factors_item">
+                        <div class="factors_item_icon">
+                            <img class="img" src="./src/image/icon4.jpg" />
+                        </div>
+                        <p class="factors_item_title center">资金</p>
+                    </div>
+                    <div class="factors_item">
+                        <div class="factors_item_icon">
+                            <img class="img" src="./src/image/icon5.jpg" />
+                        </div>
+                        <p class="factors_item_title center">人才</p>
+                    </div>
+                    <div class="factors_item factors_special">
+                        <div class="factors_item_icon">
+                            <img class="img" src="./src/image/icon6.jpg" />
+                        </div>
+                        <p class="factors_item_title center">合作</p>
+                    </div>
+
+                    <!--登陆-->
+                    <ul class="login">
+                        <li id="login" class="center">登陆</li>
+                        <li id="login_wx" class="center">微信</li>
+                        <li id="login_app" class="center">APP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="content_padding">
+        <div class="extension_container">
+            <div class="extension_banner">
+                <img class="img" src="./src/image/extension.jpg" />
+            </div>
+            <div class="extension_banner">
+                <img class="img" src="./src/image/extension1.jpg" />
+            </div>
+            <div class="extension_banner">
+                <img class="img" src="./src/image/extension2.jpg" />
+            </div>
+        </div>
+
+
+
+
+
+        <div class="content">
+            <div class="content_item">
+                <div class="content_item_left">
+                    <div class="content_title center">
+                        联网联控
+                    </div>
+                    <div class="content_banner">
+                        <img class="img" src="src/image/simple0.jpg" />
+                    </div>
+                </div>
+                <div class="content_item_right">
+                    <div class="get_info font_size_20">
+                        <p id="getData">本月累计接收数据1233455条</p>
+                        <p id="postData">本月累计下发数据12335条</p>
+                    </div>
+                    <div class="form_info" id="form_info">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="content_item">
+                <div class="content_item_left">
+                    <div class="content_title center">
+                        网络约车
+                    </div>
+                    <div class="content_banner">
+                        <img class="img" src="src/image/simple1.jpg" />
+                    </div>
+                </div>
+                <div class="content_item_right">
+                    <div class="get_info_city">
+                        <p id="getCity" class="center font_size_20">当前定位城市：北京</p>
+
+                    </div>
+                    <div class="form_info" id="form_cart">
+                        <div class="form_info_item form_info_title">
+                            <span class="flex_item3">企业名称</span>
+                            <span class="flex_item2">驾驶员数量</span>
+                            <span class="flex_item2">营运车辆数据</span>
+                        </div>
+                        <div class="form_info_item">
+                            <span class="flex_item3">北京图为先科技有限公司</span>
+                            <span class="flex_item2">200</span>
+                            <span class="flex_item2">220</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content_item">
+                <div class="content_item_left">
+                    <div class="content_title center">
+                        货运车辆公共监管与服务
+                    </div>
+                    <div class="content_banner">
+                        <img class="img" src="src/image/simple2.jpg" />
+                    </div>
+                </div>
+                <div class="content_item_right">
+                    <div class="get_info_service flex_item1 font_size_20">
+                        <p class="positionData1" class="center font_size_20">今日接收到的动态位置数据</p>
+                        <p class="positionData2 center" id="positionData_total" class="center"><span class="font_size_30 main_color">30000000</span>条</p>
+                    </div>
+                    <div class="form_info_service flex_item1 font_size_14" id="form_service">
+                        <span class="center"><a href="javascript:;">入网审批</a></span>
+                        <span class="center"><a href="javascript:;">动态监管</a></span>
+                        <span class="center"><a href="javascript:;">紧急处理</a></span>
+                        <span class="center"><a href="javascript:;">预警功能</a></span>
+                        <span class="center"><a href="javascript:;">货运车辆注册信息</a></span>
+                        <span class="center"><a href="javascript:;">车辆基础数据</a></span>
+                        <span class="center"><a href="javascript:;">动态位置信息</a></span>
+                        <span class="center"><a href="javascript:;">服务商信息</a></span>
+                        <span class="center"><a href="javascript:;">预警信息</a></span>
+                        <span class="center"><a href="javascript:;">终端信息</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content_item">
+                <div class="content_item_left">
+                    <div class="content_title center">
+                        交通运输监督
+                    </div>
+                    <div class="content_banner">
+                        <img class="img" src="src/image/simple3.jpg" />
+                    </div>
+                </div>
+                <div class="content_item_right">
+                    <div class="get_info_city font_size_20">
+                        <p id="supervise" class="center">监督电话：12328</p>
+
+                    </div>
+                    <div class="form_info_supervise" id="form_supervise">
+                        <div class="five_system">
+                            <h3>5大系统</h3>
+                            <div class="five_system_content font_size_14">
+                                <span class="center"><a href="javascript:;">台业务处理系统</a></span>
+                                <span class="center"><a href="javascript:;">决策分析系统</a></span>
+                                <span class="center"><a href="javascript:;">知识库应用系统</a></span>
+                                <span class="center"><a href="javascript:;">门户网站</a></span>
+                                <span class="center"><a href="javascript:;">运行管理系统</a></span>
+                            </div>
+                        </div>
+                        <div class="third_exchange">
+                            <h3>三大类数据交换</h3>
+                            <div class="third_exchange_content font_size_14">
+                                <span class="center"><a href="javascript:;">业务工单数据报送</a></span>
+                                <span class="center"><a href="javascript:;">工单转办及反馈</a></span>
+                                <span class="center"><a href="javascript:;">知识数据交换</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="extension_container">
+            <div class="extension_banner">
+                <img class="img" src="./src/image/extension.jpg" />
+            </div>
+            <div class="extension_banner">
+                <img class="img" src="./src/image/extension1.jpg" />
+            </div>
+            <div class="extension_banner">
+                <img class="img" src="./src/image/extension2.jpg" />
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="footer">
+            <div class="footer_left">
+                <div class="footer_logo">
+                    <img class="img" src="src/image/logo.png" />
+                </div>
+                <div class="footer_link">
+                    <ul class="font_size_14">
+                        <li><a href="javascript:;">网站地图</a></li>
+                        <li><a href="javascript:;">网站建设</a></li>
+                        <li><a href="javascript:;">免责申明</a></li>
+                        <li><a href="javascript:;">联系我们</a></li>
+                        <li><a href="javascript:;">相关链接</a></li>
+                    </ul>
+                    <p class="font_size_14">京公网安备 11010502030232号 |增值电信业务经营许可证：合字B2-20090004</p>
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_image">
+                    <img class="img" src="src/image/logo.png"/>
+                </div>
+                <div class="government_websites center font_size_14">
+                    政府网站
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script src="./build/bundle.js"></script>-->
+<script src="http://localhost:8080/bundle.js"></script>
+</body>
+</html>

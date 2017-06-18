@@ -80,4 +80,7 @@ a:hover {
 	overflow: hidden;
 	white-space: nowrap;
 }
+.padding_left{
+	padding-left: 5px;
+}
 

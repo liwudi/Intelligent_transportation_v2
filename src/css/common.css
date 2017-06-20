@@ -30,7 +30,7 @@ a{
 }
 a:hover {
 	text-decoration: none;
-	color: red;
+	color: #333333;
 }
 .center{
 	display: flex;
@@ -69,8 +69,7 @@ a:hover {
 	height:100%;
 }
 .activeClass{
-	background-color: #3C78FF;
-	color: white;
+	color: orange;
 }
 .border_top{
 	border-top:1px solid #CCCCCC;
@@ -80,7 +79,7 @@ a:hover {
 	overflow: hidden;
 	white-space: nowrap;
 }
-.padding_left{
-	padding-left: 5px;
+.margin_top_25{
+	margin-top: 25px;
 }
 

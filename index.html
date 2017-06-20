@@ -2,16 +2,34 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>智能交通服务平台</title>
+		<title>道路运输综合信息服务平台</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link src="fonts/iconfont.css">
+		<link rel="stylesheet" href="src/css/common.css"> 
+		<link rel="stylesheet" href="src/css/index.css"> 
+		<script src="src/index2.js"></script>
+		<script src="src/lib/jquery-3.2.1.min.js"></script>
+		
+		<script>
+			
+			$(function() {
+				search_tab(false);
+				banner();
+				getNetEvent();
+				getCartDataEvent();
+				login();
+				navMouseEnterEvent();
+				tabShowItem();
+                menu();
+			});
+		</script>
 	</head>
 	<body>
 		<div class="container">
 			<div class="header">
 				<ul class="header_ul">
-					<li class="header_li3 center"><a class="header_link" href="javascript:;">全国重点营运车辆联网恋空</a></li>
-					<li class="header_li3 center padding_left"><a class="header_link" href="javascript:;">道路运政管理信息服务系统</a></li>
+					<li class="header_li3 center"><a class="header_link" href="javascript:;">全国重点营运车辆联网联控</a></li>
+					<li class="header_li3 center"><a class="header_link" href="javascript:;">道路运政管理信息服务系统</a></li>
 					<li class="header_li2 center"><a class="header_link" href="javascript:;">货运车辆系统</a></li>
 					<li class="header_li2 center"><a class="header_link" href="javascript:;">客运联网系统</a></li>
 					<li class="header_li2 center"><a class="header_link" href="javascript:;">驾驶培训系统</a></li>
@@ -27,7 +45,7 @@
 						<img class="logo_image" src="src/image/logo.png"/>
 					</div>
 					<div class="title_box">
-						<span class="logo_title">智能交通服务平台</span>
+						<span class="logo_title"></span>
 					</div>
 				</div>
 				<div class="search_container">
@@ -36,7 +54,7 @@
 
 						<div class="input_icon">
 							<div id="search_tab" class="input_content center">产品</div>
-							<ul id="search_list" class="input_list">
+							<ul id="search_list" class="input_list" style="display: none;">
 								<li class="input_list_item center">产品</li>
 								<li class="input_list_item center">服务</li>
 								<li class="input_list_item center">公司</li>
@@ -51,132 +69,67 @@
 				</div>
 			</div>
 			<div class="nav">
-				<!--<div class="nav_left">-->
-					<!--<div class="nav_serviceTitle ali_center">-->
-						<!--快捷服务-->
-					<!--</div>-->
-					<!--<ul class="nav_service">-->
-						<!--<li class="nav_service_item">公共服务类</li>-->
-						<!--<li class="nav_service_item">行业综合查询类</li>-->
-						<!--<li class="nav_service_item">行业监管类</li>-->
-						<!--<li class="nav_service_item">从业人员服务类</li>-->
-						<!--<li class="nav_service_item">第三方共享服务类</li>-->
-					<!--</ul>-->
-				<!--</div>-->
+				<div class="nav_left">
+					<div class="nav_serviceTitle ali_center">
+						快捷服务
+					</div>
+					<ul class="nav_service">
+						<li class="nav_service_item">公共服务类
+							<div class="nav_service_item_postion">
+								<h3>公共服务提供基本服务类型</h3>
+								<p>道路查询、质量检测、车辆维护、信息咨询等。</p>
+								<h3>公共服务站点</h3>
+								<p>北京、上海、广州、深圳等。</p>
+							</div>
+						</li>
+						<li class="nav_service_item">行业综合查询类
+							<div class="nav_service_item_postion">
+								<h3>行业综合查询基本服务类型</h3>
+								<p>道路查询、质量检测、车辆维护、信息咨询等。</p>
+								<h3>行业综合查询站点</h3>
+								<p>北京、上海、广州、深圳等。</p>
+							</div>
+						</li>
+						<li class="nav_service_item">行业监管类
+							<div class="nav_service_item_postion">
+								<h3>行业监管基本服务类型</h3>
+								<p>道路查询、质量检测、车辆维护、信息咨询等。</p>
+								<h3>行业监管站点</h3>
+								<p>北京、上海、广州、深圳等。</p>
+							</div>
+						</li>
+						<li class="nav_service_item">从业人员服务类
+							<div class="nav_service_item_postion">
+								<h3>从业人员服务提供基本服务类型</h3>
+								<p>道路查询、质量检测、车辆维护、信息咨询等。</p>
+								<h3>从业人员服务站点</h3>
+								<p>北京、上海、广州、深圳等。</p>
+							</div>
+						</li>
+						<li class="nav_service_item">第三方共享服务类
+							<div class="nav_service_item_postion">
+								<h3>第三方共享服务提供基本服务类型</h3>
+								<p>道路查询、质量检测、车辆维护、信息咨询等。</p>
+								<h3>第三方共享服务站点</h3>
+								<p>北京、上海、广州、深圳等。</p>
+							</div>
+						</li>
+					</ul>
+				</div>
 				<div class="nav_right">
 					<div class="nav_nav">
 						<ul class="nav_ul flex_box">
-							<li class="flex_item3 center" id="home">首页
-								<div class="item_box" id="second-home">
-									<a href="javascript:;">共享目录</a>
-									<a href="javascript:;">地面资料</a>
-									<a href="javascript:;">高空资料</a>
-									<a href="javascript:;">海洋资料</a>
-									<a href="javascript:;">辐射资料</a>
-									<a href="javascript:;">农气资料</a>
-									<a href="javascript:;">数值预报</a>
-									<a href="javascript:;">历史气候</a>
-									<a href="javascript:;">雷达资料</a>
-									<a href="javascript:;">卫星资料</a>
-									<a href="javascript:;">服务产品</a>
-								</div>
-							</li>
-							<li class="flex_item3 center" id="business">运政业务
-								<div class="item_box" id="second-business">
-									<a href="javascript:;">地面观测</a>
-									<a href="javascript:;">高空观测</a>
-									<a href="javascript:;">卫星云图</a>
-									<a href="javascript:;">雷达产品</a>
-									<a href="javascript:;">模式产品</a>
-									<a href="javascript:;">降水融合</a>
-									<a href="javascript:;">路面同化</a>
-								</div>
-							</li>
-							<li class="flex_item3 center" id="connect">联网联控
-								<div class="item_box" id="second-connect">
-									<a href="javascript:;">共享目录</a>
-									<a href="javascript:;">地面资料</a>
-									<a href="javascript:;">高空资料</a>
-									<a href="javascript:;">海洋资料</a>
-									<a href="javascript:;">辐射资料</a>
-									<a href="javascript:;">农气资料</a>
-									<a href="javascript:;">数值预报</a>
-									<a href="javascript:;">历史气候</a>
-								</div>
-							</li>
-							<li class="flex_item3 center" id="driveEducation">驾驶培训
-								<div class="item_box" id="second-driveEducation">
-									<a href="javascript:;">共享目录</a>
-									<a href="javascript:;">地面资料</a>
-									<a href="javascript:;">高空资料</a>
-									<a href="javascript:;">海洋资料</a>
-									<a href="javascript:;">辐射资料</a>
-									<a href="javascript:;">农气资料</a>
-									<a href="javascript:;">数值预报</a>
-									<a href="javascript:;">历史气候</a>
-								</div>
-							</li>
-							<li class="flex_item3 center" id="sell">联网售票
-								<div class="item_box" id="second-sell">
-									<a href="javascript:;">共享目录</a>
-									<a href="javascript:;">地面资料</a>
-									<a href="javascript:;">高空资料</a>
-									<a href="javascript:;">海洋资料</a>
-									<a href="javascript:;">辐射资料</a>
-									<a href="javascript:;">农气资料</a>
-									<a href="javascript:;">数值预报</a>
-									<a href="javascript:;">历史气候</a>
-								</div>
-							</li>
-							<li class="flex_item4 center" id="transfrom">运输服务监督
-								<div class="item_box" id="second-transfrom">
-									<a href="javascript:;">共享目录</a>
-									<a href="javascript:;">地面资料</a>
-									<a href="javascript:;">高空资料</a>
-									<a href="javascript:;">海洋资料</a>
-									<a href="javascript:;">辐射资料</a>
-									<a href="javascript:;">农气资料</a>
-									<a href="javascript:;">数值预报</a>
-									<a href="javascript:;">历史气候</a>
-								</div>
-							</li>
-							<li class="flex_item3 center" id="carContrl">网约车监管
-								<div class="item_box" id="second-carContrl">
-									<a href="javascript:;">共享目录</a>
-									<a href="javascript:;">地面资料</a>
-									<a href="javascript:;">高空资料</a>
-									<a href="javascript:;">海洋资料</a>
-									<a href="javascript:;">辐射资料</a>
-									<a href="javascript:;">农气资料</a>
-									<a href="javascript:;">数值预报</a>
-									<a href="javascript:;">历史气候</a>
-								</div>
-							</li>
+							<!-- <li class="flex_item3 center">道路运输</li> -->
+							<li class="flex_item3 center">运政业务</li>
+							<li class="flex_item3 center">联网联控</li>
+							<li class="flex_item3 center">驾驶培训</li>
+							<li class="flex_item3 center">联网售票</li>
+							<li class="flex_item3 center">运输服务监督</li>
+							<li class="flex_item3 center">网约车监管</li>
 						</ul>
 					</div>
 					<div class="nav_rightBottom">
-						<div class="home-page flex_item1">
-							<ul class="home-page-box">
-								<li class="home-page-item"><a href="javascript:;" class="center">共享目录</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
-								<ul class="home-page-position">
-									<li class="center home-page-position-item">目录一</li>
-									<li class="center home-page-position-item">目录二</li>
-									<li class="center home-page-position-item">目录三</li>
-								</ul>
-								<li class="home-page-item"><a href="javascript:;" class="center">地面资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
-								<li class="home-page-item"><a href="javascript:;" class="center">高空资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
-								<li class="home-page-item"><a href="javascript:;" class="center">海洋资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
-								<li class="home-page-item"><a href="javascript:;" class="center">辐射资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
-								<li class="home-page-item"><a href="javascript:;" class="center">农气资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
-								<li class="home-page-item"><a href="javascript:;" class="center">数值预报</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
-								<li class="home-page-item"><a href="javascript:;" class="center">历史气候</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
-								<li class="home-page-item"><a href="javascript:;" class="center">雷达资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
-								<li class="home-page-item"><a href="javascript:;" class="center">卫星资料</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
-								<li class="home-page-item"><a href="javascript:;" class="center">服务产品</a><div class="icon-item center"><span class="center tabShowItem">+</span></div></li>
-
-							</ul>
-						</div>
-						<div class="nav_banner flex_item3">
+						<div class="nav_banner flex_item2">
 							<div class="banner">
 								<img class="img" src="./src/image/banner0.jpg"/>
 								<div class="left center"><</div>
@@ -198,54 +151,61 @@
 							</div>
 
 						</div>
-						<div class="nav_factors flex_item2">
+						<div class="nav_factors flex_item1">
 							<!--七大要素-->
 							<div class="factors_item">
 								<div class="factors_item_icon">
-									<img class="img" src="./src/image/icon0.jpg" />
+									<img class="img" src="./src/image/ys_yewurenyuan.png" />
 								</div>
-								<p class="factors_item_title center">团队</p>
+								<p class="factors_item_title center">业务人员分析</p>
 							</div>
 							<div class="factors_item">
 								<div class="factors_item_icon">
-									<img class="img" src="./src/image/icon1.jpg" />
+									<img class="img" src="./src/image/ys_ruwangcheliang.png" />
 								</div>
-								<p class="factors_item_title center">技术</p>
+								<p class="factors_item_title center">入网车辆分析</p>
 							</div>
 							<div class="factors_item">
 								<div class="factors_item_icon">
-									<img class="img" src="./src/image/icon2.jpg" />
+									<img class="img" src="./src/image/ys_yehufenxi.png" />
 								</div>
-								<p class="factors_item_title center">管理</p>
+								<p class="factors_item_title center">业户分析</p>
 							</div>
 							<div class="factors_item">
 								<div class="factors_item_icon">
-									<img class="img" src="./src/image/icon3.jpg" />
+									<img class="img" src="./src/image/ys_xianlufenxi.png" />
 								</div>
-								<p class="factors_item_title center">运营</p>
+								<p class="factors_item_title center">线路分析</p>
 							</div>
 							<div class="factors_item">
 								<div class="factors_item_icon">
-									<img class="img" src="./src/image/icon4.jpg" />
+									<img class="img" src="./src/image/ys_zhengjian.png" />
 								</div>
-								<p class="factors_item_title center">资金</p>
+								<p class="factors_item_title center">证件要素分析</p>
 							</div>
 							<div class="factors_item">
 								<div class="factors_item_icon">
-									<img class="img" src="./src/image/icon5.jpg" />
+									<img class="img" src="./src/image/ys_pingjia.png" />
 								</div>
-								<p class="factors_item_title center">人才</p>
+								<p class="factors_item_title center">评价要素分析</p>
 							</div>
 							<div class="factors_item factors_special">
 								<div class="factors_item_icon">
-									<img class="img" src="./src/image/icon6.jpg" />
+									<img class="img" src="./src/image/ys_kaohe.png" />
 								</div>
-								<p class="factors_item_title center">合作</p>
+								<p class="factors_item_title center">考核要素分析</p>
+							</div>
+							<div class="factors_item factors_special">
+								<div class="factors_item_icon">
+									<img class="img" src="./src/image/ys_piaowu.png" />
+								</div>
+								<p class="factors_item_title center">票务费用分析</p>
 							</div>
 
-							<!--登陆-->
+							<!--登录-->
+							
 							<ul class="login">
-								<li id="login" class="center">登陆</li>
+								<li id="login" class="center">登录</li>
 								<li id="login_wx" class="center">微信</li>
 								<li id="login_app" class="center">APP</li>
 							</ul>
@@ -256,17 +216,23 @@
 			
 			
 			
-
+			<div class="content_padding">
 			<div class="extension_container">
 				<div class="extension_banner">
-					<img class="img" src="./src/image/extension.jpg" />
+					<img class="img" src="./src/image/baoxian.jpg" />
 				</div>
 				<div class="extension_banner">
-					<img class="img" src="./src/image/extension1.jpg" />
+					<img class="img" src="./src/image/wuliu2.jpg" />
 				</div>
 				<div class="extension_banner">
-					<img class="img" src="./src/image/extension2.jpg" />
+					<img class="img" src="./src/image/lvyou.jpg" />
 				</div>
+				<div class="extension_banner">
+					<img class="img" src="./src/image/huanbao2.png" />
+				</div>
+				<div class="extension_banner">
+					<img class="img" src="./src/image/yingji.png" />
+				</div>		
 			</div>
 			
 			
@@ -280,16 +246,85 @@
 							联网联控
 						</div>
 						<div class="content_banner">
-							<img class="img" src="src/image/simple0.jpg" />
+							<img class="img" src="src/image/hangye_banner1.png" />
 						</div>
 					</div>
 					<div class="content_item_right">
-						<div class="get_info font_size_20">
+						<div class="get_info font_size_15">
 							<p id="getData">本月累计接收数据1233455条</p>
 							<p id="postData">本月累计下发数据12335条</p>
 						</div>
 						<div class="form_info" id="form_info">
-
+							<!--下面这个是一行一行排列的表格，也可以用小面的代码-->
+							<!--
+							<div class="form_info_item">
+								<div class="item_place center_left">地点</div>
+								<div class="item_get center">接收数据</div>
+								<div class="item_post center">发送数据</div>
+							</div>
+							<div class="form_info_item">
+								<div class="item_place center_left">北京</div>
+								<div class="item_get center">5000条</div>
+								<div class="item_post center">500条</div>
+							</div>
+							<div class="form_info_item">
+								<div class="item_place center_left">上海</div>
+								<div class="item_get center">4000条</div>
+								<div class="item_post center">400条</div>
+							</div>
+							<div class="form_info_item">
+								<div class="item_place center_left">广州</div>
+								<div class="item_get center">3000条</div>
+								<div class="item_post center">300条</div>
+							</div>
+							<div class="form_info_item">
+								<div class="item_place center_left">深圳</div>
+								<div class="item_get center">2000条</div>
+								<div class="item_post center">200条</div>
+							</div>
+							-->
+							<div class = "form_item font_size_14">
+								<div class="form_item_left center">北京</div>
+								<div class="form_item_right">
+									<div class="form_item_right_data center">98398条</div>
+									<div class="form_item_right_data center border_top">234条</div>
+								</div>
+							</div>
+							<div class = "form_item font_size_14">
+								<div class="form_item_left center">北京</div>
+								<div class="form_item_right">
+									<div class="form_item_right_data center">98398条</div>
+									<div class="form_item_right_data center border_top">234条</div>
+								</div>
+							</div>
+							<div class = "form_item font_size_14">
+								<div class="form_item_left center">北京</div>
+								<div class="form_item_right">
+									<div class="form_item_right_data center">98398条</div>
+									<div class="form_item_right_data center border_top">234条</div>
+								</div>
+							</div>
+							<div class = "form_item font_size_14">
+								<div class="form_item_left center">北京</div>
+								<div class="form_item_right">
+									<div class="form_item_right_data center">98398条</div>
+									<div class="form_item_right_data center border_top">234条</div>
+								</div>
+							</div>
+							<div class = "form_item font_size_14">
+								<div class="form_item_left center">北京</div>
+								<div class="form_item_right">
+									<div class="form_item_right_data center">98398条</div>
+									<div class="form_item_right_data center border_top">234条</div>
+								</div>
+							</div>
+							<div class = "form_item font_size_14">
+								<div class="form_item_left center">北京</div>
+								<div class="form_item_right">
+									<div class="form_item_right_data center">98398条</div>
+									<div class="form_item_right_data center border_top">234条</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -300,22 +335,45 @@
 							网络约车
 						</div>
 						<div class="content_banner">
-							<img class="img" src="src/image/simple1.jpg" />
+							<img class="img" src="src/image/hangye_banner2.png" />
 						</div>
 					</div>
 					<div class="content_item_right">
 						<div class="get_info_city">
-							<p id="getCity" class="center font_size_20">当前定位城市：北京</p>
+							<p id="getCity" class="center font_size_20"></p>
 
 						</div>
 						<div class="form_info form_tab" id="form_cart">
 							<div class="location_tab">
-								<div class="flex_item1 center activeClass tab_item">产品</div>
-								<div class="flex_item1 center tab_item">团队</div>
-								<div class="flex_item1 center tab_item">思维</div>
+								<div align='center' class="flex_item1 center activeClass tab_item">生产加工</div>
+								<div align='center' class="flex_item1 center tab_item">制造</div>
+								<div align='center' class="flex_item1 center tab_item">设计</div>
+
 
 							</div>
-							<div class="location_content center">产品界面</div>
+							<div class="location_content center">
+								<div class="production location_content_item">
+									<ul>
+										<li class="item_row nowrap">就是这么燃！不仅总理点赞，社会各界也鼎力支持。</li>
+										<li class="item_row nowrap">合作、共赢、共智-工业互联网国际论坛。</li>
+										<li class="item_row nowrap">工业互联网国际论坛分论坛：军民融合深度发展之路。</li>
+									</ul>
+								</div>
+								<div class="making location_content_item">
+									<ul>
+										<li class="item_row nowrap">不仅总理点赞，社会各界也鼎力支持。</li>
+										<li class="item_row nowrap">合作、共赢、共智-工业互联网国际论坛。</li>
+										<li class="item_row nowrap">工业互联网国际论坛分论坛：军民融合深度发展之路。</li>
+									</ul>
+								</div>
+								<div class="design location_content_item">
+									<ul>
+										<li class="item_row nowrap">就是这么燃！</li>
+										<li class="item_row nowrap">合作、共赢、共智-工业互联网国际论坛。</li>
+										<li class="item_row nowrap">工业互联网国际论坛分论坛：军民融合深度发展之路。</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -326,13 +384,16 @@
 							货运车辆公共监管与服务
 						</div>
 						<div class="content_banner">
-							<img class="img" src="src/image/simple2.jpg" />
+							<img class="img" src="src/image/hangye_banner3.png" />
 						</div>
 					</div>
 					<div class="content_item_right">
 						<div class="get_info_service flex_item1 font_size_20">
 							<p class="positionData1" class="center font_size_20">今日接收到的动态位置数据</p>
-							<p class="positionData2 center" id="positionData_total" class="center"><span class="font_size_30 main_color">30000000</span>条</p>
+							<p class="positionData2 center" id="positionData_total" class="center"><span class="font_size_30 main_color">40000</span>条</p>
+							<p class="font_size_14 center margin_top_25">货运车辆行程数据：100000条</p>
+							<p class="font_size_14 center">货运车辆油耗数据：100000条</p>
+							<p class="font_size_14 center">货运车辆数据：100000条</p>
 						</div>
 						<div class="form_info_service flex_item1 font_size_14" id="form_service">
 							<span class="center"><a href="javascript:;">入网审批</a></span>
@@ -355,7 +416,7 @@
 							交通运输监督
 						</div>
 						<div class="content_banner">
-							<img class="img" src="src/image/simple3.jpg" />
+							<img class="img" src="src/image/hangye_banner4.png" />
 						</div>
 					</div>
 					<div class="content_item_right">
@@ -391,18 +452,23 @@
 			
 			
 			
-			<div class="extension_container">
-				<div class="extension_banner">
-					<img class="img" src="./src/image/extension.jpg" />
+			<div class="extension_container2">
+				<div class="extension_banner2">
+					<img class="img" src="./src/image/baoxian.jpg" />
 				</div>
-				<div class="extension_banner">
-					<img class="img" src="./src/image/extension1.jpg" />
+				<div class="extension_banner2">
+					<img class="img" src="./src/image/wuliu2.jpg" />
 				</div>
-				<div class="extension_banner">
-					<img class="img" src="./src/image/extension2.jpg" />
+				<div class="extension_banner2">
+					<img class="img" src="./src/image/lvyou.jpg" />
 				</div>
+				<div class="extension_banner2">
+					<img class="img" src="./src/image/huanbao2.png" />
+				</div>
+				<div class="extension_banner2">
+					<img class="img" src="./src/image/yingji.png" />
+				</div>		
 			</div>
-			
 			
 			
 			
@@ -426,16 +492,16 @@
 				</div>
 				<div class="footer_right">
 					<div class="footer_right_image">
-						<img class="img" src="src/image/logo.png"/>
+						<img class="logo_image" src="src/image/logo.png"/>
 					</div>
 					<div class="government_websites center font_size_14">
 						政府网站
 					</div>
 				</div>
 			</div>
-
+			</div>
 		</div>
-		<script src="./build/bundle.js"></script>
+		<!-- <script src="./build/bundle.js"></script> -->
 		<!--<script src="http://localhost:8080/bundle.js"></script>-->
 	</body>
 </html>
